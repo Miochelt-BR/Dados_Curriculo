@@ -1,0 +1,183 @@
+/* Resetando padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 36px;
+    color: #000; /* Nome em preto */
+    font-weight: bold;
+    animation: animateName 5s ease-in-out infinite;
+}
+
+/* Importando fonte personalizada */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+    font-family: "Russo One", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365FA0;
+    font-size: 100px;
+}
+
+/* Animação para o nome */
+@keyframes animateName {
+    0%   {
+        fill: rgba(72,138,204,0); 
+        stroke: rgba(54,95,160,1);
+        stroke-dashoffset: 25%; 
+        stroke-dasharray: 0 50%; 
+        stroke-width: 2;
+    }
+    70%  {
+        fill: rgba(72,138,204,0); 
+        stroke: rgba(54,95,160,1); 
+    }
+    80%  {
+        fill: rgba(72,138,204,0); 
+        stroke: rgba(54,95,160,1); 
+        stroke-width: 3; 
+    }
+    100% {
+        fill: rgba(72,138,204,1); 
+        stroke: rgba(54,95,160,0);
+        stroke-dashoffset: -25%; 
+        stroke-dasharray: 50% 0; 
+        stroke-width: 0;
+    }
+}
+
+.wrapper {
+    background-color: #FFFFFF;
+}
+
+.header p {
+    font-size: 18px;
+    color: #666; /* Texto secundário em cinza */
+}
+
+/* Seções */
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    border-bottom: 2px solid #000; /* Linha preta embaixo dos títulos */
+    padding-bottom: 5px;
+    color: #333; /* Títulos em preto */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Contato */
+.contact a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Lista de certificações, habilidades, etc */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333; /* Texto em preto */
+}
+
+/* Estilo para a experiência profissional */
+.experience li {
+    padding-left: 20px;
+    text-indent: -20px;
+    color: #333; /* Texto em preto */
+}
+
+.experience strong {
+    font-weight: bold;
+    color: #000; /* Destaque em preto */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+}
+
+/* Responsividade para telas menores (smartphones) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}
